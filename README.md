@@ -39,3 +39,16 @@ TELEGRAM_CHAT_ID=
 ```
 
 Quando elas ficam vazias, o workflow apenas registra o agendamento e responde ao site.
+
+## WhatsApp automático
+
+O workflow também pode enviar uma mensagem inicial ao cliente por WhatsApp depois que o pedido for registrado no CORE PS. Configure no `.env`:
+
+```env
+WHATSAPP_API_URL=
+WHATSAPP_API_TOKEN=
+WHATSAPP_TO_FIELD=to
+WHATSAPP_MESSAGE_FIELD=message
+```
+
+`WHATSAPP_API_URL` deve apontar para o endpoint HTTP do provedor de WhatsApp. O workflow envia `Authorization: Bearer WHATSAPP_API_TOKEN` e um JSON com os campos definidos em `WHATSAPP_TO_FIELD` e `WHATSAPP_MESSAGE_FIELD`. Se alguma variável obrigatória estiver vazia, o envio por WhatsApp é ignorado e o agendamento continua funcionando.
