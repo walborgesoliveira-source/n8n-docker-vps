@@ -36,7 +36,10 @@ O workflow de agendamento do Massoterapia RJ pode enviar alerta para Telegram qu
 ```env
 TELEGRAM_BOT_TOKEN=
 TELEGRAM_CHAT_ID=
+TELEGRAM_CHAT_IDS=
 ```
+
+Use `TELEGRAM_CHAT_IDS` para enviar para mais de um destino, separados por virgula. Exemplo: `1399833142,-5144021908`.
 
 Quando elas ficam vazias, o workflow apenas registra o agendamento e responde ao site.
 
