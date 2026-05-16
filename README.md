@@ -28,3 +28,14 @@ O serviço `n8n` usa:
 ## Segurança
 
 Não versionar `.env`, dumps, backups ou exports de workflows com segredos.
+
+## Notificações Telegram
+
+O workflow de agendamento do Massoterapia RJ pode enviar alerta para Telegram quando estas variáveis existirem no `.env`:
+
+```env
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
+```
+
+Quando elas ficam vazias, o workflow apenas registra o agendamento e responde ao site.
