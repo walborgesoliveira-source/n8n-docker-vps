@@ -39,7 +39,9 @@ TELEGRAM_CHAT_ID=
 TELEGRAM_CHAT_IDS=
 ```
 
-Use `TELEGRAM_CHAT_IDS` para enviar para mais de um destino, separados por virgula. Exemplo: `1399833142,-5144021908`.
+Use `TELEGRAM_CHAT_IDS` para enviar para mais de um destino, separados por virgula. Exemplo atual do Massoterapia RJ: `1399833142,-1003952424161`.
+
+Ao trocar IDs no `.env`, recrie o container com `docker compose up -d n8n`. Apenas `docker compose restart n8n` nao recarrega variaveis de ambiente ja gravadas no container.
 
 Quando elas ficam vazias, o workflow apenas registra o agendamento e responde ao site.
 
